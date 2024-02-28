@@ -1,0 +1,26 @@
+<h2>Registrazione Agent Space Traders</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <p>Name</p>
+  <input type="text" placeholder="name" [formControl]="name" />
+  <p>Faction</p>
+  <select [formControl]="faction" id="faction" (change)="onSelectedFaction()">
+    <option *ngFor="let symbol of symbols" [value]="symbol" id="{{symbol}}">{{ symbol }}</option>
+  </select>
+  <button>Submit</button>
+</form>
+
+<div *ngIf="selectedSymbol">
+  <h2 *ngIf="isRecruiting">{{selectedSymbol}} ✅</h2>
+  <h2 *ngIf="!isRecruiting">{{selectedSymbol}} </h2>
+
+  <ul>
+    <li *ngFor="let trait of traits">
+      <h3>{{trait.name}}</h3>
+      {{trait.description}}
+    </li>
+  </ul>
+    <!--<button (click)="onRemoveTrait(trait)">Remove</button>-->
+
+</div>
+
