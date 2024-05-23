@@ -5,8 +5,10 @@ import {LoginComponent} from "./features/component/login/login.component";
 import {HomeComponent} from "./features/component/home/home.component";
 
 const routes: Routes = [
-  { path: '/registration', component: RegistrationFormComponent },
-  { path: '/login', component:LoginComponent},
+  { path: '**', redirectTo: 'home' },
+  { path: 'home', component: HomeComponent },
+  { path: 'registration', component: RegistrationFormComponent },
+  { path: 'login', component:LoginComponent},
 ];
 
 @NgModule({

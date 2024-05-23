@@ -1,4 +1,29 @@
+<!--
 <p>home works!</p>
+<div class = "tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<input type="button" value="register" routerLink="registration">
+<input type="button" value="login" routerLink="login">
 
-<input type="button" value="register" routerLink="/registration">
-<input type="button" value="login" routerLink="/login">
+-->
+
+<div class="d-flex">
+  <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column centro" orientation="vertical">
+    <ng-container ngbNavItem="registration">
+      <button class="pulsante" ngbNavLink>Registrazione</button>
+      <ng-template ngbNavContent>
+        <app-registration-form></app-registration-form>
+      </ng-template>
+    </ng-container>
+    <ng-container  ngbNavItem="login">
+      <button class="pulsante" ngbNavLink>Login</button>
+      <ng-template ngbNavContent>
+        <app-login></app-login>
+      </ng-template>
+    </ng-container>
+  </div>
+
+  <div [ngbNavOutlet]="nav" class="ms-4"></div>
+</div>

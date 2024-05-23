@@ -12,7 +12,7 @@
 
 <div *ngIf="selectedSymbol">
   <h2 *ngIf="isRecruiting">{{selectedSymbol}} ✅</h2>
-  <h2 *ngIf="!isRecruiting">{{selectedSymbol}} </h2>
+  <h2 *ngIf="!isRecruiting">{{selectedSymbol}} ❌</h2>
 
   <ul>
     <li *ngFor="let trait of traits">

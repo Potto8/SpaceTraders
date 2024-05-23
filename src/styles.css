@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+/* Corpo principale */
+body {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+/* Titoli */
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Pannelli */
+.pannello {
+  background-color: #222222;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulsanti */
+.pulsante {
+  background-color: #FF9900;
+  color: #000000;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.centro{
+  display: flex;
+  align-items: center;
+}

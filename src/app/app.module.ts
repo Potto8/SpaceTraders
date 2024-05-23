@@ -8,6 +8,7 @@ import { FactiondetailComponent } from './features/component/factiondetail/facti
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './features/component/login/login.component';
 import { HomeComponent } from './features/component/home/home.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HomeComponent } from './features/component/home/home.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
